@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         binding?.btnChangeFragmentText?.setOnClickListener {
-            activityInterface?.ChangeFragmentText("${binding?.edittext1?.text?.toString()}")
+            activityInterface?.ChangeFragmentText(binding?.edittext1?.text?.toString()?:"")
         }
 
     }
 
     fun changeActivityTextI(string: String) {
-        binding?.btnChangeFragmentText?.setText(string.toString())
+        binding?.btnChangeFragmentText?.setText(string)
     }
 
 }

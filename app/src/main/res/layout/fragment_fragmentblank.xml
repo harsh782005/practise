@@ -19,4 +19,16 @@
      android:layout_height="wrap_content"
      android:hint="@string/anything"
      android:id="@+id/edittext2"/>
+ <com.google.android.material.button.MaterialButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/date"
+     android:id="@+id/btndate"
+     android:layout_gravity="center"/>
+ <com.google.android.material.button.MaterialButton
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/time"
+     android:id="@+id/btntime"
+     android:layout_gravity="center"/>
 </LinearLayout>

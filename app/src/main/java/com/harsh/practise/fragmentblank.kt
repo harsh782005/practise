@@ -49,7 +49,7 @@ class fragmentblank : Fragment(), ActivityInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.btnChangeActivityText?.setOnClickListener {
-            mainActivity?.changeActivityTextI("${binding?.edittext2?.text?.toString()}")
+            mainActivity?.changeActivityTextI(binding?.edittext2?.text?.toString()?:"")
         }
     }
 
@@ -74,6 +74,7 @@ class fragmentblank : Fragment(), ActivityInterface {
     }
 
     override fun ChangeFragmentText(string: String) {
-        binding?.btnChangeActivityText?.setText(string.toString())
+        binding?.btnChangeActivityText?.setText(string)
+
     }
 }
