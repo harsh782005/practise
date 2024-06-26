@@ -49,8 +49,14 @@ class fragmentblank : Fragment(), ActivityInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding?.btnChangeActivityText?.setOnClickListener {
-            mainActivity?.changeActivityTextI(binding?.edittext2?.text?.toString()?:"")
+            if (binding?.edittext2?.text?.toString().isNullOrEmpty()) {
+                binding?.edittext2?.error = "fill the edit text"
+            } else {
+
+                mainActivity?.changeActivityTextI(binding?.edittext2?.text?.toString() ?: "")
+            }
         }
+
     }
 
     companion object {

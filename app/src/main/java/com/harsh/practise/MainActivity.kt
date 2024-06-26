@@ -22,8 +22,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         binding?.btnChangeFragmentText?.setOnClickListener {
+            if (binding?.edittext1?.text?.toString().isNullOrEmpty()){
+                binding?.edittext1?.error = "enter the edit text"
+            }
+            else {
             activityInterface?.ChangeFragmentText(binding?.edittext1?.text?.toString()?:"")
-        }
+        }}
 
     }
 
